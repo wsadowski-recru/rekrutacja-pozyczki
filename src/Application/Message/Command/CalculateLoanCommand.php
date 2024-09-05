@@ -23,6 +23,26 @@ class CalculateLoanCommand
         $this->installmentsPerYear = $installmentsPerYear;
     }
 
+    public function getAmount(): int
+    {
+        return $this->amount;
+    }
+
+    public function getAnnualInterestRate(): float
+    {
+        return $this->annualInterestRate;
+    }
+
+    public function getInstallments(): int
+    {
+        return $this->installments;
+    }
+
+    public function getInstallmentsPerYear(): int
+    {
+        return $this->installmentsPerYear;
+    }
+
     private function validateAmount(int $amount): void
     {
         if ($amount < 1000 || $amount > 12000 || $amount % 500 !== 0) {
