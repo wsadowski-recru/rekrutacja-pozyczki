@@ -36,6 +36,6 @@ class LoanController extends AbstractController
             return new JsonResponse(['message' => 'Coś poszło nie tak, Twoja wiadomość wydaje się nie poprawna'], Response::HTTP_BAD_REQUEST);
         }
 
-        return new JsonResponse();
+        return new JsonResponse($response);
     }
 }
