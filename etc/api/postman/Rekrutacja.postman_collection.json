@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "42281de2-20cc-4733-a9e0-50675d9f848e",
+		"name": "Rekrutacja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10652481"
+	},
+	"item": [
+		{
+			"name": "Calculate loan",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 1000,\r\n    \"annual_interest_rate\": 7.99,\r\n    \"installments\": 3,\r\n    \"installments_per_year\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/loan/calculate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"loan",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
