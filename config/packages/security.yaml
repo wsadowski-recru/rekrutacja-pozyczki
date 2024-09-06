@@ -1,0 +1,12 @@
+security:
+    firewalls:
+        api:
+            pattern: ^/api
+            stateless: true
+            custom_authenticators:
+                - App\Shared\Auth\CustomJwtAuthenticator
+    providers:
+        jwt_user_provider:
+            id: App\Shared\Auth\JwtUserProvider
+    access_control:
+        - { path: ^/api, roles: IS_AUTHENTICATED_FULLY }
