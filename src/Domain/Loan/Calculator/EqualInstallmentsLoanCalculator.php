@@ -11,7 +11,7 @@ use DateTimeImmutable;
 
 class EqualInstallmentsLoanCalculator implements LoanCalculatorInterface
 {
-    public function calculate(int $amount, float $annualInterestRate, int $installments, int $installmentsPerYear): LoanCalculations
+    public function calculate(int $amount, float $annualInterestRate, int $installments): LoanCalculations
     {
         $k = InstallmentsPerYear::MONTHLY->value;
         $r = $annualInterestRate / 100;

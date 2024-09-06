@@ -10,8 +10,8 @@ class LoanCalculator
     {
     }
 
-    public function calculate(int $amount, float $annualInterestRate, int $installments, int $installmentsPerYear): LoanCalculations
+    public function calculate(int $amount, float $annualInterestRate, int $installments): LoanCalculations
     {
-        return $this->calculator->calculate($amount, $annualInterestRate, $installments, $installmentsPerYear);
+        return $this->calculator->calculate($amount, $annualInterestRate, $installments);
     }
 }

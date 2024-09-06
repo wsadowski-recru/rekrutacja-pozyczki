@@ -14,6 +14,6 @@ class CalculateLoanHandler
 
     public function handle(CalculateLoanCommand $command): LoanCalculations
     {
-        return $this->loanCalculator->calculate($command->getAmount(), $command->getAnnualInterestRate(), $command->getInstallments(), $command->getInstallmentsPerYear());
+        return $this->loanCalculator->calculate($command->getAmount(), $command->getAnnualInterestRate(), $command->getInstallments());
     }
 }
