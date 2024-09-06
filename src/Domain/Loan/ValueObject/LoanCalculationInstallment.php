@@ -4,13 +4,13 @@ namespace App\Domain\Loan\ValueObject;
 
 use JsonSerializable;
 
-class LoanCalculationInstallment implements JsonSerializable
+readonly class LoanCalculationInstallment implements JsonSerializable
 {
     public function __construct(
-        private readonly int $installmentNumber,
-        private readonly float $installmentAmount,
-        private readonly float $interestPayment,
-        private readonly float $principalPayment
+        private int $installmentNumber,
+        private float $installmentAmount,
+        private float $interestPayment,
+        private float $principalPayment
     ) {
     }
 

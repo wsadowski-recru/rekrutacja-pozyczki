@@ -8,7 +8,6 @@ use Symfony\Component\Security\Core\User\UserProviderInterface;
 
 class JwtUserProvider implements UserProviderInterface
 {
-
     public function refreshUser(UserInterface $user): UserInterface
     {
         throw new \Exception('Not supported.');

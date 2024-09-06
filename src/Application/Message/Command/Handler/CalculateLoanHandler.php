@@ -3,8 +3,8 @@
 namespace App\Application\Message\Command\Handler;
 
 use App\Application\Message\Command\CalculateLoanCommand;
+use App\Domain\Loan\Calculator\LoanCalculator;
 use App\Domain\Loan\ValueObject\LoanCalculations;
-use App\Domain\Service\LoanCalculator;
 
 class CalculateLoanHandler
 {

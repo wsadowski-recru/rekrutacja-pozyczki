@@ -1,8 +1,7 @@
 services:
     _defaults:
-        autowire: true      # Automatically injects dependencies in your services.
-        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
-
+        autowire: true
+        autoconfigure: true
 
     App\:
         resource: '../src/'
@@ -11,6 +10,5 @@ services:
             - '../src/Entity/'
             - '../src/Kernel.php'
 
-
-    App\Domain\Service\LoanCalculatorInterface:
-        alias: App\Domain\Service\EqualInstallmentsLoanCalculator
+    App\Domain\Loan\Calculator\LoanCalculatorInterface:
+        alias: App\Domain\Loan\Calculator\EqualInstallmentsLoanCalculator

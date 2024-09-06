@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Service;
+namespace App\Domain\Loan\Calculator;
 
 use App\Domain\Loan\Enum\InstallmentsPerYear;
 use App\Domain\Loan\ValueObject\LoanCalculationInstallment;
