@@ -28,7 +28,6 @@ class LoanController extends AbstractController
                 $payload['amount'],
                 $payload['annual_interest_rate'],
                 $payload['installments'],
-                $payload['installments_per_year'],
             ));
         } catch (InvalidArgumentException $e) {
             return new JsonResponse(['message' => $e->getMessage()], Response::HTTP_BAD_REQUEST);

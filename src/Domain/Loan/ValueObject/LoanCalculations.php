@@ -4,12 +4,11 @@ namespace App\Domain\Loan\ValueObject;
 
 use JsonSerializable;
 
-class LoanCalculations implements JsonSerializable
+readonly class LoanCalculations implements JsonSerializable
 {
-
     public function __construct(
-        private readonly LoanCalculationSchedule $schedule,
-        private readonly LoanCalculationMetrics  $metrics
+        private LoanCalculationSchedule $schedule,
+        private LoanCalculationMetrics $metrics
     )
     {
     }

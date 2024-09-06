@@ -14,11 +14,8 @@ use Symfony\Component\Security\Http\Authenticator\Passport\SelfValidatingPasspor
 
 class CustomJwtAuthenticator extends AbstractAuthenticator
 {
-    private $userProvider;
-
-    public function __construct(UserProviderInterface $userProvider)
+    public function __construct(private readonly UserProviderInterface $userProvider)
     {
-        $this->userProvider = $userProvider;
     }
 
     public function supports(Request $request): ?bool

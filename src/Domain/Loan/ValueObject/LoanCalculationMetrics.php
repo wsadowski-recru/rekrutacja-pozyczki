@@ -5,16 +5,15 @@ namespace App\Domain\Loan\ValueObject;
 use DateTimeImmutable;
 use JsonSerializable;
 
-class LoanCalculationMetrics implements JsonSerializable
+readonly class LoanCalculationMetrics implements JsonSerializable
 {
     public function __construct(
-        private readonly DateTimeImmutable $calculationTime,
-        private readonly int $totalInstallments,
-        private readonly float $principal,
-        private readonly float $annualInterestRate
+        private DateTimeImmutable $calculationTime,
+        private int $totalInstallments,
+        private float $principal,
+        private float $annualInterestRate
     ) {
     }
-
 
     public function jsonSerialize(): array
     {

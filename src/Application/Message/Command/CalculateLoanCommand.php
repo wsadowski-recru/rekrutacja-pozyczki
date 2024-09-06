@@ -9,10 +9,8 @@ class CalculateLoanCommand
     private int $amount;
     private float $annualInterestRate;
     private int $installments;
-    private int $installmentsPerYear;
 
-
-    public function __construct(int $amount, float $annualInterestRate, int $installments, int $installmentsPerYear)
+    public function __construct(int $amount, float $annualInterestRate, int $installments)
     {
         $this->validateAmount($amount);
         $this->validateInstallments($installments);
@@ -20,7 +18,6 @@ class CalculateLoanCommand
         $this->amount = $amount;
         $this->installments = $installments;
         $this->annualInterestRate = $annualInterestRate;
-        $this->installmentsPerYear = $installmentsPerYear;
     }
 
     public function getAmount(): int
@@ -36,11 +33,6 @@ class CalculateLoanCommand
     public function getInstallments(): int
     {
         return $this->installments;
-    }
-
-    public function getInstallmentsPerYear(): int
-    {
-        return $this->installmentsPerYear;
     }
 
     private function validateAmount(int $amount): void

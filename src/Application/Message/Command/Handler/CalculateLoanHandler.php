@@ -3,8 +3,8 @@
 namespace App\Application\Message\Command\Handler;
 
 use App\Application\Message\Command\CalculateLoanCommand;
+use App\Domain\Loan\Calculator\LoanCalculator;
 use App\Domain\Loan\ValueObject\LoanCalculations;
-use App\Domain\Service\LoanCalculator;
 
 class CalculateLoanHandler
 {
@@ -14,6 +14,6 @@ class CalculateLoanHandler
 
     public function handle(CalculateLoanCommand $command): LoanCalculations
     {
-        return $this->loanCalculator->calculate($command->getAmount(), $command->getAnnualInterestRate(), $command->getInstallments(), $command->getInstallmentsPerYear());
+        return $this->loanCalculator->calculate($command->getAmount(), $command->getAnnualInterestRate(), $command->getInstallments());
     }
 }

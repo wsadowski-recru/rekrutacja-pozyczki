@@ -15,7 +15,6 @@ class LoanCalculationSchedule implements JsonSerializable
         $this->installments[] = $installment;
     }
 
-
     public function jsonSerialize(): array
     {
         return array_map(

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Domain\Service;
+namespace App\Domain\Loan\Calculator;
 
 use App\Domain\Loan\Enum\InstallmentsPerYear;
 use App\Domain\Loan\ValueObject\LoanCalculationInstallment;
@@ -11,7 +11,7 @@ use DateTimeImmutable;
 
 class EqualInstallmentsLoanCalculator implements LoanCalculatorInterface
 {
-    public function calculate(int $amount, float $annualInterestRate, int $installments, int $installmentsPerYear): LoanCalculations
+    public function calculate(int $amount, float $annualInterestRate, int $installments): LoanCalculations
     {
         $k = InstallmentsPerYear::MONTHLY->value;
         $r = $annualInterestRate / 100;
