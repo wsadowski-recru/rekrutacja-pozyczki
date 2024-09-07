@@ -33,16 +33,14 @@ class CustomJwtAuthenticator extends AbstractAuthenticator
 
         $token = $matches[1];
 
-        // Use UserProvider to load user
         return new SelfValidatingPassport(new UserBadge($token, function ($token) {
-            // Pass the token to the user provider
             return $this->userProvider->loadUserByIdentifier($token);
         }));
     }
 
     public function onAuthenticationSuccess(Request $request, TokenInterface $token, string $firewallName): ?Response
     {
-        return null; // Continue with the request
+        return null;
     }
 
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception): ?Response
