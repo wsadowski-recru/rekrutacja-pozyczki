@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Infrastructure\Serializer;
+namespace App\Shared\Serializer;
 
 class JsonDeserializer
 {

@@ -4,7 +4,7 @@ namespace App\Infrastructure\Controller;
 
 use App\Application\Message\Command\CalculateLoanCommand;
 use App\Application\Message\Command\Handler\CalculateLoanHandler;
-use App\Infrastructure\Serializer\JsonDeserializer;
+use App\Shared\Serializer\JsonDeserializer;
 use InvalidArgumentException;
 use JsonException;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
