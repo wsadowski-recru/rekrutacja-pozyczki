@@ -7,7 +7,35 @@
 	},
 	"item": [
 		{
-			"name": "Calculate loan",
+			"name": "Calculate loan - 200",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"amount\": 1000,\r\n    \"annual_interest_rate\": 7.99,\r\n    \"installments\": 3,\r\n    \"installments_per_year\": 3\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/loan/calculate",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"loan",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate loan - 401",
 			"request": {
 				"method": "POST",
 				"header": [],
